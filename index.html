@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PocketPay Kenya</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+    color: #1a1a1a;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0b2c5e, #1a8f3c);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header img {
+    height: 60px;
+}
+
+header h1 {
+    margin: 10px 0 5px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+.hero p {
+    color: #555;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* CARD */
+.card-preview {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.card-preview img {
+    width: 320px;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.card-preview img:hover {
+    transform: scale(1.05);
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta a {
+    background: #25D366;
+    color: white;
+    padding: 16px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+    background: #0b2c5e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<header class="fade-in">
+    <img src="logo.png">
+    <h1>PocketPay</h1>
+    <p>Fast • Secure • Simple</p>
+</header>
+
+<section class="hero fade-in">
+    <h2>Get Paid Instantly with PocketPay</h2>
+    <p>No more delays. No confusion. Just scan and pay using M-Pesa.</p>
+</section>
+
+<section class="card-preview fade-in">
+    <img src="card.png" alt="PocketPay Card">
+</section>
+
+<section class="features fade-in">
+    <div class="feature-box">⚡ Fast Payments</div>
+    <div class="feature-box">📱 Works with M-Pesa</div>
+    <div class="feature-box">💳 Portable Card</div>
+    <div class="feature-box">🛍 Perfect for Vendors</div>
+</section>
+
+<section class="cta fade-in">
+    <a href="https://wa.me/254742893977">Order on WhatsApp</a>
+</section>
+
+<footer>
+    <p>© 2026 PocketPay Kenya</p>
+</footer>
+
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
